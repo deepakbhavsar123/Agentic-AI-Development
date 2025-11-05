@@ -445,10 +445,15 @@ agency.run("Build a calculator app")
 - Open-source friendly
 
 ```python
-from transformers.agents import HfAgent
+from transformers import HfAgent
 
-agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
-agent.run("Draw a picture of a cat")
+# Initialize agent with a model endpoint
+agent = HfAgent(url_endpoint="https://api-inference.huggingface.co/models/bigcode/starcoder")
+
+# Or use OpenAI/Anthropic models
+# agent = HfAgent(model="gpt-4")
+
+agent.run("Generate an image of a sunset")
 ```
 
 **Key Features**:

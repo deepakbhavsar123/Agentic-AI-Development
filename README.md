@@ -445,9 +445,9 @@ agency.run("Build a calculator app")
 - Open-source friendly
 
 ```python
-from transformers import CodeAgent
+from transformers.agents import HfAgent
 
-agent = CodeAgent(tools=[])
+agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
 agent.run("Draw a picture of a cat")
 ```
 
